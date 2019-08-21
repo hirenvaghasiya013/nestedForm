@@ -1,0 +1,11 @@
+<h3>Template Driven Forms</h3>
+
+<form>
+    <input type="text" [(ngModel)]="person.mainInput" name="mainInput">
+    <select class="form-control" id="country" [(ngModel)]="person.country" name="country">
+      <option *ngFor="let c of countries" [ngValue]="c">{{c.name}}</option>
+    </select>
+    <app-child-td [state]="states" [pdata]="person">
+    </app-child-td>
+    <input type="submit" value="submit" (click)="saveData()">
+  </form>

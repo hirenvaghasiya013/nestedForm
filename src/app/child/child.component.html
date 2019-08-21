@@ -1,0 +1,6 @@
+<div [formGroup]="form">
+  <select class="form-control" id="state" formControlName="state" [(ngModel)]="pdata.state">
+    <option *ngFor="let s of states" [ngValue]="s">{{s.name}}</option>
+  </select>
+  <input type="text" formControlName="childInput">
+</div>
